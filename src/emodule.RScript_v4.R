@@ -1,5 +1,5 @@
 
-
+#
 # This is a R-script to show the possibilities for statistics in research.
 
 # A data file is generated to show the possibilities of R and to show how data can be analysed. 
