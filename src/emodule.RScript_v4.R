@@ -11,23 +11,6 @@
 # that difficulties are coming your way but with the strength of the phoenix behind you, 
 # you will prevail.
 
-##### no need to run next lines when you received the resulting files (simulated_data.csv en simulated_data.xlsx) 
-set.seed(1234321)
-sim.data <- data.frame(id = c(1:200), 
-                       bw = round(c(rnorm(100, 4.9, 1.2), rnorm(100, 3.9, 1.2)), 1),
-                       sex = c(rep("M", 100), rep("F", 100)),
-                       diseased = c(rbinom(100, 1, 0.3), rbinom(100, 1, 0.4)),
-                       immuno.status = I(rbinom(200, size = 2, prob = c(0.1,0.2,0.8)) + 1)
-                       )
-sim.data$age <- round(sim.data$bw + abs(rnorm(200, 0, 2))) 
-sim.data$age[sim.data$age < 2] <- 2
-
-write.table(sim.data, file = "simulated_data.csv", quote = FALSE, sep = "\t", dec = ".", row.names = FALSE,
-            col.names = TRUE)
-rm(sim.data) # remove/delete unnecessary objects, clean desk policy
-# start excel , open simulated_data.csv, change column via menu Data "Text to column" and save as simulated_data.xlsx
-
-### Start from here when you have the data files
 
 
 ################
@@ -74,7 +57,9 @@ rm(sim.data) # remove/delete unnecessary objects, clean desk policy
 # The format could be as e.g. unformatted txt of csv file (Part 2a) or an excel file (Part 2b)
 
 ## Part 2b Reading .txt or .csv file and study the imported data
-sim.data <- read.table(file = "simulated_data.csv", sep = "\t", dec = ".", header = TRUE)
+pwd <- "../data/raw/" # path where data are stored
+file <- "simulated_data.csv" # data file 
+sim.data <- read.table(paste0(pwd, file), sep = "\t", dec = ".", header = TRUE)
 
 ## checking the imported file
 # Show the first 6 records
