@@ -1,10 +1,20 @@
-# re-simple-python-project
+# R-script example for e-learning in the Master thesis
 
-This simple project structure template repository is adapted from the [Good Enough Project](https://github.com/bvreede/good-enough-project) Cookiecutter template by Barbara Vreede (2019).
+This is a R-script to show the possibilities for statistics in research.
+But be aware that more ways lead to the same/similar result.
+
+The used dataset is simulated for species PHOENIX.
+*The Phoenix is a sign of death and rebirth in the Greek mythology. 
+Feeling drawn to the Phoenix or seeing it in your dreams can be a prophetic symbol 
+that difficulties are coming your way but with the strength of the phoenix behind you, 
+you will prevail. https://simple.wikipedia.org/wiki/Phoenix_(mythology)*
+
+The elearning for Master thesis can be found at https://ulearning.uu.nl/login/index.php .
+
 
 ## Usage
 
-Click "Use this template" at the top of this page to create a new repository with the same folder structure.
+Within Rstudio your can run this code step by step  and study the result as well as the code used to create the .result
 
 ## Project Structure
 
